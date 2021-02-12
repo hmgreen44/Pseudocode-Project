@@ -5,7 +5,7 @@
 # Start
 
 ### Variables
- 1. User (hands)
+ 1. User (Hands)
  2. Water dispenser HandleC - Cold water, HandleH - Hot Water
   <p>(Allow user to choose water temp and pressure based on value of HandleC, and HandleH)<br></p>
   <p>Water temperature would be calculated on a fixed amount starting at 55F and reaching a maximum of 120F <br></p>
@@ -13,13 +13,15 @@
  3. Water pressure value
   <p>(Pressure in a water-solid system will increase about 100 psi for every 1 Fahrenheit increase in temperature)</p>
  4. Water temp value 55 Fahrenheit or 'F' minimum, 120 'F' maximum <br>
- 5. Liquid Soap Dispenser (Assume automatic placement of 1ml of soap on hands if detected) <br>
+ 5. Liquid Soap Dispenser (Assume automatic placement of 1ml of soap on hands if detected)<br>
+ **IMPORTANT** Soap dispenser has a sensor to detect if 'user' is requesting soap called "soapSensor" <br>
+ <br>
  6. Soap Quantity (Set to a constant value of 1ml) <br>
  7. Towel <br>
 
 ### Inputs
-1. User
-   <p>Initiate water (True) once either HandleH or HandleC is not set to default value (False) <br>
+1. User <p>
+Initiate water (True) once either HandleH or HandleC is not set to default value (False) <br>
    - Activate HandleC and HandleH to desired water temp and pressure values <br>
    - Place hands under water <br>
    - Place hands directly under automatic soap dispenser <br>
@@ -38,7 +40,6 @@ Main valve
 2. Soap dispenser
    <p>0.7ml is the lowest dose sufficient to comfortably spread across all surfaces of most people's hands <br>
    - by default would be set to (False) <br>
-**IMPORTANT** Has a sensor to detect if 'user' is requesting soap called "soapSensor" <br>
    - Checks in real time for 'user' hands under light sensor <br>
    - If sensor detects 'user' activate soap dispenser <br>
    - Dispenses by default 1ml of soap onto users hand <br>
