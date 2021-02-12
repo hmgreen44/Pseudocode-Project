@@ -11,16 +11,16 @@
  3. Water pressure value <br>
 - Pressure in a water-solid system will increase about 100 psi for every 1 Fahrenheit increase in temperature) <br>
  4. Water temp value 55 Fahrenheit or 'F' minimum, 120 'F' maximum <br>
- 5. Liquid Soap Dispenser (Assume automatic placement of 1ml of soap on hands if detected)<br></p>
- <p> **IMPORTANT** Soap dispenser has a sensor to detect if 'user' is requesting soap called "soapSensor" </p>
+ 5. Liquid Soap Dispenser (Assume automatic placement of 1ml of soap on hands if detected)<br>
+- Soap dispenser has a sensor to detect if 'user' is requesting soap called "soapSensor"<br>
  6. Soap Quantity (Set to a constant value of 1ml) <br>
  7. Towel <br>
-<p>Allow user to choose water temp and pressure based on value of HandleC, and HandleH)<br>
-Water temperature would be calculated on a fixed amount starting at 55F and reaching a maximum of 120F</p>
+- Allow user to choose water temp and pressure based on value of HandleC, and HandleH)<br>
+- Water temperature would be calculated on a fixed amount starting at 55F and reaching a maximum of 120F</p>
 
 ### Inputs
 1. User <p>
-Initiate water (True) once either HandleH or HandleC is not set to default value (False) <br>
+Initiate water (True) once either HandleH or HandleC is not set to default value (False)
    - Activate HandleC and HandleH to desired water temp and pressure values <br>
    - Place hands under water <br>
    - Place hands directly under automatic soap dispenser <br>
@@ -36,8 +36,8 @@ Main valve
     - Dispenses water based on 'user' input for 'handleH' and 'handleC' position <br>
     - Continues to dispense exact value presented until value is changed <br>
     - Ceases flow of water when values are set back to default (False)</p>
-2. Soap dispenser
-<p>0.7ml is the lowest dose sufficient to comfortably spread across all surfaces of most people's hands <br>
+2. Soap dispenser <p>
+0.7ml is the lowest dose sufficient to comfortably spread across all surfaces of most people's hands <br>
    - By default would be set to (False) <br>
    - Checks in real time for 'user' hands under light sensor <br>
    - If sensor detects 'user' activate soap dispenser <br>
