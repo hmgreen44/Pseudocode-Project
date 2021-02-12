@@ -29,41 +29,35 @@
 ### Outputs
 1. Water dispenser
    <p>Main valve 
-    Set to (False) constant by default until user input <br>
-    Allows flow of water when 'user' sets value of 'handleC' or 'handleH' from (False) to (True) <br>
-    Starts function that determines values of 'handleC' and 'handleH' in real time <br>
-    dispenses water based on 'user' input for 'handleH' and 'handleC' position <br>
-    continues to dispense exact value presented until value is changed <br>
-    ceases flow of water when values are set back to default (False)</p>
+    - Set to (False) constant by default until user input <br>
+    - Allows flow of water when 'user' sets value of 'handleC' or 'handleH' from (False) to (True) <br>
+    - Starts function that determines values of 'handleC' and 'handleH' in real time <br>
+    - Dispenses water based on 'user' input for 'handleH' and 'handleC' position <br>
+    - Continues to dispense exact value presented until value is changed <br>
+    - Ceases flow of water when values are set back to default (False)</p>
 2. Soap dispenser
    <p>0.7ml is the lowest dose sufficient to comfortably spread across all surfaces of most people's hands <br>
-   by default would be set to (False)
-    **IMPORTANT** has a sensor to detect if 'user' is requesting soap called "soapSensor"
-   checks in real time for 'user' hands under light sensor
-   If sensor detects 'user' activate soap dispenser
-   dispenses by default 1ml of soap onto users hand
-   after soap is dispensed set sensor value back to false for (5) seconds called "soapCooldown"
-   after (5) seconds set sensor back to real time check for 'user'
-   soap dispenser should return to default value (false) after 1ml has left measuring container
+   - by default would be set to (False) <br>
+**IMPORTANT** Has a sensor to detect if 'user' is requesting soap called "soapSensor" <br>
+   Checks in real time for 'user' hands under light sensor <br>
+   If sensor detects 'user' activate soap dispenser <br>
+   Dispenses by default 1ml of soap onto users hand <br>
+   After soap is dispensed set sensor value back to false for (5) seconds called "soapCooldown" <br>
+   After (5) seconds set sensor back to real time check for 'user' <br>
+   Soap dispenser should return to default value (false) after 1ml has left measuring container <br>
 3. Towel
    Absorb water </p>
 
 ### Rough Idea of hand washing function/console
-<p>init HandWashing <br>
+<p>Init HandWashing <br>
 "Water Dispenser" return (False) <br>
 "soapSensor" checking for 'user' input <br>
 "Soap Dispenser" return (False) <br>
-'User' Activate 'handleH' 60% 'handleC' 50%  <br></p>
-<p>//If 'handleC' is set to any value alone water temp equals 55F, else 'handleH' adds increasing temperature and pressure to a maximum of 120F</p>
-<p>Dispensing 'water' return (True) <br>
+'User' Activate HandleH 60% HandleC 50%  <br>
+Dispensing water return (True) <br>
 "soapSensor" detects 'User' <br>
 Dispensing 1ml of soap <br>
 Activate "soapCooldown" <br>
-5... <br>
-4... <br>
-3... <br>
-2... <br>
-1... <br>
 "soapSensor" checking for 'user' input <br>
 "soapSensor" return false <br>
 "Water Dispenser" set to default value return (False)</p>
