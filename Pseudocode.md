@@ -4,20 +4,19 @@
 
 # Start
 
-### Variables
- 1. User (Hands)
- 2. Water dispenser HandleC - Cold water, HandleH - Hot Water
-  <p>(Allow user to choose water temp and pressure based on value of HandleC, and HandleH)<br></p>
-  <p>Water temperature would be calculated on a fixed amount starting at 55F and reaching a maximum of 120F <br></p>
-  <p>If HandleC is set to any value alone water temp equals 55F, else HandleH adds increasing temperature and pressure to a maximum of 120F<br></p>
- 3. Water pressure value
-  <p>(Pressure in a water-solid system will increase about 100 psi for every 1 Fahrenheit increase in temperature)</p>
+### Variables <p>
+ 1. User (Hands) <br>
+ 2. Water dispenser HandleC - Cold water, HandleH - Hot Water <br>
+- If HandleC is set to any value alone water temp equals 55F, else HandleH adds increasing temperature and pressure to a maximum of 120F<br>
+ 3. Water pressure value <br>
+- Pressure in a water-solid system will increase about 100 psi for every 1 Fahrenheit increase in temperature) <br>
  4. Water temp value 55 Fahrenheit or 'F' minimum, 120 'F' maximum <br>
- 5. Liquid Soap Dispenser (Assume automatic placement of 1ml of soap on hands if detected)<br>
- **IMPORTANT** Soap dispenser has a sensor to detect if 'user' is requesting soap called "soapSensor" <br>
- <br>
+ 5. Liquid Soap Dispenser (Assume automatic placement of 1ml of soap on hands if detected)<br></p>
+ <p> **IMPORTANT** Soap dispenser has a sensor to detect if 'user' is requesting soap called "soapSensor" </p>
  6. Soap Quantity (Set to a constant value of 1ml) <br>
  7. Towel <br>
+<p>Allow user to choose water temp and pressure based on value of HandleC, and HandleH)<br>
+Water temperature would be calculated on a fixed amount starting at 55F and reaching a maximum of 120F</p>
 
 ### Inputs
 1. User <p>
@@ -38,8 +37,8 @@ Main valve
     - Continues to dispense exact value presented until value is changed <br>
     - Ceases flow of water when values are set back to default (False)</p>
 2. Soap dispenser
-   <p>0.7ml is the lowest dose sufficient to comfortably spread across all surfaces of most people's hands <br>
-   - by default would be set to (False) <br>
+<p>0.7ml is the lowest dose sufficient to comfortably spread across all surfaces of most people's hands <br>
+   - By default would be set to (False) <br>
    - Checks in real time for 'user' hands under light sensor <br>
    - If sensor detects 'user' activate soap dispenser <br>
    - Dispenses by default 1ml of soap onto users hand <br>
@@ -47,7 +46,7 @@ Main valve
    - After (5) seconds set sensor back to real time check for 'user' <br>
    - Soap dispenser should return to default value (false) after 1ml has left measuring container <br>
 3. Towel
-   Absorb water </p>
+   - Absorb water </p>
 
 ### Rough Idea of hand washing function/console
 <p>Init HandWashing <br>
